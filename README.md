@@ -40,7 +40,7 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :items, through: :purchases
+- has_many :items
 - has_many :purchases
 
 
@@ -56,11 +56,12 @@ Things you may want to cover:
 | postage_id   | integer    | null: false                    |
 | ship_date_id | integer    | null: false                    |
 | price        | integer    | null: false                    |
+| user         | references | foreign_key: true              |
 
 ### Association
 
-- has_many :users, through: :purchases
-- has_many :purchases
+- belongs_to :user
+- has_one :purchase
 
 
 
@@ -81,14 +82,15 @@ Things you may want to cover:
 
 ## addresses テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| postal_code  | string     | null: false                    |
-| prefecture   | string     | null: false                    |
-| city         | string     | null: false                    |
-| block        | string     | null: false                    |
-| building     | string     |                                |
-| phone_number | string     | null: false                    |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| postal_code   | string     | null: false                    |
+| prefecture_id | integer    | null: false                    |
+| city          | string     | null: false                    |
+| block         | string     | null: false                    |
+| building      | string     |                                |
+| phone_number  | string     | null: false                    |
+| purchases     | references | foreign_key: true              |
 
 ### Association
 
