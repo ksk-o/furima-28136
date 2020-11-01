@@ -90,7 +90,7 @@ Things you may want to cover:
 | block         | string     | null: false                    |
 | building      | string     |                                |
 | phone_number  | string     | null: false                    |
-| purchases     | references | foreign_key: true              |
+| purchase      | references | foreign_key: true              |
 
 ### Association
 
