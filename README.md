@@ -29,37 +29,54 @@ Things you may want to cover:
 
 | Column              | Type    | Options                   |
 | ------------------- | ------- | ------------------------- |
+| nickname            | string  | null: false               |
+| email               | string  | null: false, unique: true |
 | encrypted_password  | string  | null: false               |
 | last_name           | string  | null: false               |
 | first_name          | string  | null: false               |
-| last_name_hurigana  | string  | null: false               |
-| first_name_hurigana | string  | null: false               |
+| last_name_furigana  | string  | null: false               |
+| first_name_furigana | string  | null: false               |
 | birthday            | date    | null: false               |
 
 ### Association
 
-- has_many :addresses
-- has_many :items
-- has_many :purchasers
+- has_many :items, through: :purchases
+- has_many :purchases
+
 
 
 ## items テーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| name        | string     | null: false                    |
-| description | text       | null: false                    |
-| category    | integer    | null: false                    |
-| condition   | integer    | null: false                    |
-| postage     | integer    | null: false                    |
-| ship_date   | integer    | null: false                    |
-| price       | integer    | null: false                    |
-| user        | references | null: false, foreign_key: true |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| name         | string     | null: false                    |
+| description  | text       | null: false                    |
+| category_id  | integer    | null: false                    |
+| condition_id | integer    | null: false                    |
+| postage_id   | integer    | null: false                    |
+| ship_date_id | integer    | null: false                    |
+| price        | integer    | null: false                    |
+
+### Association
+
+- has_many :users, through: :purchases
+- has_many :purchases
+
+
+
+## purchase テーブル
+
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| item          | references | null: false, foreign_key: true |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_one    :purchaser
+- belongs_to :item
+- has_one :address
+
 
 
 ## addresses テーブル
@@ -72,22 +89,7 @@ Things you may want to cover:
 | block        | string     | null: false                    |
 | building     | string     |                                |
 | phone_number | string     | null: false                    |
-| user         | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :user
-- belongs_to :purchaser
-
-
-## purchasers テーブル
-
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| item          | references | null: false, foreign_key: true |
-| user          | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :item
-- has_many   :address
+- belongs_to :purchase
