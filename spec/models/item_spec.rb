@@ -28,34 +28,34 @@ RSpec.describe Item, type: :model do
       expect(@item.errors.full_messages).to include("Description can't be blank")
     end
 
-    it "category_idが空では登録できないこと" do
-      @item.category_id = nil
+    it "category_idが1では登録できないこと" do
+      @item.category_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Category can't be blank","Category is not a number")
+      expect(@item.errors.full_messages).to include("Category must be other than 1")
     end
 
-    it "condition_idが空では登録できないこと" do
-      @item.condition_id = nil
+    it "condition_idが1では登録できないこと" do
+      @item.condition_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Condition can't be blank","Condition is not a number")
+      expect(@item.errors.full_messages).to include("Condition must be other than 1")
     end
 
-    it "postage_idが空では登録できないこと" do
-      @item.postage_id = nil
+    it "postage_idが1では登録できないこと" do
+      @item.postage_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Postage can't be blank","Postage is not a number")
+      expect(@item.errors.full_messages).to include("Postage must be other than 1")
     end
 
-    it "shipping_plase_idが空では登録できないこと" do
-      @item.shipping_plase_id = nil
+    it "shipping_plase_idが1では登録できないこと" do
+      @item.shipping_plase_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Shipping plase can't be blank", "Shipping plase is not a number")
+      expect(@item.errors.full_messages).to include("Shipping plase must be other than 1")
     end
 
-    it "ship_date_idが空では登録できないこと" do
-      @item.ship_date_id = nil
+    it "ship_date_idが1では登録できないこと" do
+      @item.ship_date_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Ship date can't be blank", "Ship date is not a number")
+      expect(@item.errors.full_messages).to include("Ship date must be other than 1")
     end
 
     it "priceが空では登録できないこと" do
