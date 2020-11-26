@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :items
   has_many :purchases
   
-  with_options presence: true do  
+  with_options presence: true do
     NAME_REGEX =           /\A[ぁ-んァ-ン一-龥]/
     NAME_FURIGANA_REGEX =  /\A[ァ-ヶー－]+\z/
     validates :nickname
