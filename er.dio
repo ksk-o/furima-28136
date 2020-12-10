@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-11-01T12:18:58.062Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="MYkqNmH0ATweMVLHwHa1" version="13.6.5">
+<mxfile host="65bd71144e" modified="2020-12-01T06:28:55.595Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="RKp5mPOYcDytJIhPfASc" version="13.6.5">
     <diagram id="HcJd7VZhTh514uSZ8uKe" name="ページ1">
-        <mxGraphModel dx="827" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="828" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -28,7 +28,7 @@
                 <mxCell id="4" value="-Association-&#10;has_many&#10;has_many" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=0;overflow=hidden;verticalAlign=top;align=left;" parent="3" vertex="1">
                     <mxGeometry width="120" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="&#10;:items&#10;:purchases" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;verticalAlign=top;" parent="3" vertex="1">
+                <mxCell id="5" value="&#10;:items&#10;:orders" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;verticalAlign=top;" parent="3" vertex="1">
                     <mxGeometry x="120" width="80" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
@@ -49,7 +49,7 @@
                 <mxCell id="37" value="-Association-&#10;has_many&#10;has_one" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=0;overflow=hidden;verticalAlign=top;align=left;" parent="36" vertex="1">
                     <mxGeometry width="120" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="&#10;:users&#10;:purchases" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;verticalAlign=top;" parent="36" vertex="1">
+                <mxCell id="38" value="&#10;:users&#10;:orders" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;verticalAlign=top;" parent="36" vertex="1">
                     <mxGeometry x="120" width="80" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="39" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="35" vertex="1">
@@ -61,7 +61,7 @@
                 <mxCell id="41" value="string&#10;text&#10;integer&#10;integer&#10;integer&#10;integer&#10;integer&#10;referemces" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;verticalAlign=top;" parent="39" vertex="1">
                     <mxGeometry x="120" width="80" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value="purchasesテーブル" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
+                <mxCell id="49" value="ordersテーブル" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
                     <mxGeometry x="280" y="320" width="200" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="50" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="49" vertex="1">
@@ -91,19 +91,19 @@
                 <mxCell id="44" value="-Association-&#10;belongs_to" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=0;overflow=hidden;verticalAlign=top;align=left;" parent="43" vertex="1">
                     <mxGeometry width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="&#10;:purchase" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;verticalAlign=top;" parent="43" vertex="1">
+                <mxCell id="45" value="&#10;:order" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;verticalAlign=top;" parent="43" vertex="1">
                     <mxGeometry x="120" width="80" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="46" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="42" vertex="1">
                     <mxGeometry y="90" width="200" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="postal_code&#10;prefecture&#10;city&#10;block&#10;building&#10;phone_number&#10;purchaser" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;verticalAlign=top;" parent="46" vertex="1">
+                <mxCell id="47" value="postal_code&#10;prefecture&#10;city&#10;block&#10;building&#10;phone_number&#10;order" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;align=left;verticalAlign=top;" parent="46" vertex="1">
                     <mxGeometry width="120" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" value="string&#10;string&#10;string&#10;string&#10;string&#10;string&#10;references" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;verticalAlign=top;" parent="46" vertex="1">
                     <mxGeometry x="120" width="80" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="67" value="" style="endArrow=ERone;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;" edge="1" parent="1">
+                <mxCell id="67" value="" style="endArrow=ERone;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="490" y="350.4100000000001" as="sourcePoint"/>
                         <mxPoint x="560" y="290" as="targetPoint"/>
@@ -112,7 +112,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="68" value="" style="endArrow=ERmany;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;" edge="1" parent="1">
+                <mxCell id="68" value="" style="endArrow=ERmany;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="250" y="80" as="sourcePoint"/>
                         <mxPoint x="510" y="80" as="targetPoint"/>
