@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :correct_order
 
   def index
     @order_item = Item.find(params[:item_id])
@@ -44,6 +46,14 @@ class OrdersController < ApplicationController
       card: order_form_params[:token],
       currency: 'jpy'
     )
+  end
+
+  def correct_order
+    item = Item.find(params[:item_id])
+     if current_user.id == item.user_id || item.order.present?
+       @order_form = OrderForm.new
+       redirect_to root_path
+     end
   end
 
 end
