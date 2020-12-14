@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :correct_order
-  before_action :set_order_item
+  before_action :set_order_item, :correct_order
 
   def index
     @order_form = OrderForm.new
@@ -47,8 +47,7 @@ class OrdersController < ApplicationController
   end
 
   def correct_order
-    item = Item.find(params[:item_id])
-     if current_user.id == item.user_id || item.order.present?
+     if current_user.id == @order_item.user_id || @order_item.order.present?
        redirect_to root_path
      end
   end
