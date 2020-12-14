@@ -9,8 +9,7 @@ class OrdersController < ApplicationController
 
   def create
     @order_form = OrderForm.new(order_form_params)
-     if 
-       @order_form.valid?
+     if @order_form.valid?
        pay_item
        @order_form.save
        redirect_to root_path
@@ -28,8 +27,7 @@ class OrdersController < ApplicationController
      :city, 
      :block, 
      :building, 
-     :phone_number,
-     :order_id
+     :phone_number
     ).merge(
       user_id: current_user.id, 
       item_id: params[:item_id], 
